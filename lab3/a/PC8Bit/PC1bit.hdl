@@ -1,0 +1,11 @@
+
+CHIP PC1bit {
+    IN in1,in2,load,nreset;
+    OUT out;
+
+    PARTS:
+    // Put your code here:
+    Mux(a=in1,b=in2,sel=load,out=mout);
+    And(a=nreset,b=mout,out=dffin);
+    DFF(in=dffin,out=out);
+}

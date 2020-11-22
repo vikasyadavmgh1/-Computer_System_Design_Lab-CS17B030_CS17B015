@@ -1,0 +1,9 @@
+CHIP Reg32Bit {
+    IN in1[16], in2[16], load;
+    OUT out1[16], out2[16];
+
+    PARTS:
+    // Put your code here:
+    Reg16Bit(in=in1,load=load,out=out1);
+    Reg16Bit(in=in2,load=load,out=out2);
+}
